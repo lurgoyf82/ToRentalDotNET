@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization.Formatters;
 
 namespace ToRental.Models
 {
@@ -11,7 +12,6 @@ namespace ToRental.Models
         //the chassis number of this vehicle (varchar(30) NOT NULL) - UNIQUE
         public string telaio { get; set; }
         [Required, StringLength(30)]
-
 
         //Foreign key referencing the data of the owner of this vehicle stored in the table "impostazione_proprietario_veicolo" (unsigned int(20) NOT NULL)
         public int id_proprietario { get; set; }
@@ -71,5 +71,14 @@ namespace ToRental.Models
         public DateTime created_at { get; set; }
 
         public DateTime updated_at { get; set; }
+
+        internal IEnumerable<Veicolo> GetAll() {
+            //creates a list of 10 random Veicolo and returns them
+            List<Veicolo> veicoli = new List<Veicolo>();
+
+            return new Veicolo();
+
+
+        }
     }
 }
