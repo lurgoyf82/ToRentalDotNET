@@ -1,4 +1,4 @@
-@ToRental_HostAddress = http://localhost:5006
+@ToRental_HostAddress = http://localhost:5018
 
 GET {{ToRental_HostAddress}}/weatherforecast/
 Accept: application/json

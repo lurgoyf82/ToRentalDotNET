@@ -1,6 +1,0 @@
-﻿services:
-  torental:
-    image: torental
-    build:
-      context: .
-      dockerfile: ToRental/Dockerfile
